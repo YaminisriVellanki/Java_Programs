@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class FibonacciEvenSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int a = 0, b = 1;
+        int sum = 0;
+        while (a <= N) {
+            // Check if the Fibonacci term is even
+            if (a % 2 == 0) {
+                sum += a;
+            }
+            // Generate next Fibonacci number
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        System.out.println(sum);
+    }
+}
